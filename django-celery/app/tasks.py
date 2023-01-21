@@ -20,3 +20,9 @@ def send_email():
     ).send(fail_silently=False)
 
     logger.info("Email is sent")
+
+
+
+@shared_task
+def test_task():
+    print("Hello My Friend")
