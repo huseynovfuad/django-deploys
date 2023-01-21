@@ -14,6 +14,10 @@ app.conf.beat_schedule = {
         "task": "app.tasks.send_email",
         "schedule": crontab(minute="*/1"),
     },
+    "send_warehouse_test": {
+        "task": "app.tasks.test_warehouse",
+        "schedule": crontab(minute=0, hour="0 , 8, 13, 17")
+    }
 }
 
 

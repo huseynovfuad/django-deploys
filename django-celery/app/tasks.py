@@ -26,3 +26,8 @@ def send_email():
 @shared_task
 def test_task():
     print("Hello My Friend")
+
+
+@shared_task
+def test_warehouse():
+    print("For warehouse")
