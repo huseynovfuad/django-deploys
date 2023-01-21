@@ -3,7 +3,7 @@ from django.core.mail import EmailMessage
 from celery import shared_task
 from celery.utils.log import get_task_logger
 
-from core.env import get_env_variable
+# from core.env import get_env_variable
 
 
 logger = get_task_logger("core")
@@ -13,7 +13,7 @@ logger = get_task_logger("core")
 def send_email():
     logger.info("Executing periodic task")
 
-    email_to = get_env_variable("EMAIL_TO")
+    email_to = "fhuseynov803@gmail.com"
 
     EmailMessage(
         subject="Test email", body="This is a test email", to=(email_to,)
